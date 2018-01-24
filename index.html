@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hi!</title>
+  <style>
+    /* animations */
+    @keyframes blinker {
+      from { opacity: 1.0; }
+      to { opacity: 0.0; }
+    }
+
+    /* all styles */
+    body {
+      background: black;
+      color: black;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    body,
+    #fakeConsole div,
+    #fakeConsole ul {
+      margin: 0;
+    }
+    
+    #fakeConsole {
+      font-family: Courier New, Courier, monospace;
+      background: rgb(12,12,12);
+      color: rgb(204,204,204);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #fakeConsole ul {
+      padding-left: 2em;
+      list-style-type: square;
+    }
+
+    #fakeConsole .location .user {
+      color: rgb(87, 177, 255);
+    }
+
+    #fakeConsole .location .address {
+      color: aquamarine;
+    }
+
+    #fakeConsole .location .pwd {
+      color: yellow;
+    }
+
+    #fakeConsole .output a {
+      color: rgb(129, 129, 255);
+    }
+
+    #fakeConsole .output a:hover {
+      color: rgb(190, 190, 255);
+    }
+
+    #cursor {
+      width: 0.5em;
+      height: 0.7em;
+      border-bottom: 2px solid white;
+      display: inline-block;
+      animation-name: blinker;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+      animation-duration: 1s;
+    }
+
+    #other {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="fakeConsole">
+    <div class="output">
+      <div class="line">
+        Last update: Thu, 28 Dec 2017 18:00:09 +0100
+      </div>
+      <div class="line">
+      </div>
+      <div class="line">
+        Here are some links about me.
+      </div>
+      <div class="line">
+        That's all, there isn't anything else to do here.
+      </div>
+    </div>
+    <div class="command">
+      <span class="location">[<span class="user">shaun</span><span class="address">@shaun.fr</span> <span class="pwd">~</span>]$ </span>./show_links "profiles"
+    </div>
+    <div class="output">
+      <ul>
+        <li>
+          <a href="https://github.com/Chonne">Github</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/shaun-lecathelinais-91b51825">Linkedin</a>
+        </li>
+        <li>
+          <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stackoverflow</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="command">
+        <span class="location">[<span class="user">shaun</span><span class="address">@shaun.fr</span> <span class="pwd">~</span>]$ </span>./show_links "little things I've done"
+    </div>
+    <div class="output">
+      <ul>
+        <li>
+          <a href="https://algolia-mvc.shaun.fr/">A tiny demo made for an interview</a>
+        </li>
+        <li>
+          <a href="https://taco-spolsky.github.io/?level=________&amp;_____valueOf#|checksum=9521851|Shaun%20Lecathelinais" title="This was the answer for one of Trello's front-end developer recruitment tests">Proof that Trello's Taco recommends me</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="command current">
+        <span class="location">[<span class="user">shaun</span><span class="address">@shaun.fr</span> <span class="pwd">~</span>]$ </span><span id="cursor"></span>
+    </div>
+  </section>
+  <section id="other">
+    Nothing here, really.
+  </section>
+
+  <footer>
+    Really, nothing at all!
+  </footer>
+
+  <script>
+    document.getElementById('cursor').addEventListener('click', () => {
+      alert('Sorry, this isn\'t a real console');
+    });
+  </script>
+</body>
+
+</html>

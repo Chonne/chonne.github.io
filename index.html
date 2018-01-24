@@ -13,8 +13,6 @@
 
     /* all styles */
     body {
-      background: black;
-      color: black;
       display: flex;
       min-height: 100vh;
       flex-direction: column;
@@ -27,6 +25,7 @@
     }
     
     #fakeConsole {
+      flex: 1;
       font-family: Courier New, Courier, monospace;
       background: rgb(12,12,12);
       color: rgb(204,204,204);
@@ -69,74 +68,140 @@
       animation-duration: 1s;
     }
 
-    #other {
-      flex: 1;
+    header, footer {
+      padding: 2px 5px;
+      background-color: #e8e8e8;
+      font-family: sans-serif;
+      font-size: 0.8em;
     }
   </style>
 </head>
 
 <body>
+  <header>
+    Welcome to my personal playground. It's a simple (unfinished) javascript console, similar to devtools', but not as evolved.
+  </header>
   <section id="fakeConsole">
-    <div class="output">
-      <div class="line">
-        Last update: Thu, 28 Dec 2017 18:00:09 +0100
-      </div>
-      <div class="line">
-      </div>
-      <div class="line">
-        Here are some links about me.
-      </div>
-      <div class="line">
-        That's all, there isn't anything else to do here.
-      </div>
-    </div>
-    <div class="command">
-      <span class="location">[<span class="user">shaun</span><span class="address">@shaun.fr</span> <span class="pwd">~</span>]$ </span>./show_links "profiles"
-    </div>
-    <div class="output">
-      <ul>
-        <li>
-          <a href="https://github.com/Chonne">Github</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/shaun-lecathelinais-91b51825">Linkedin</a>
-        </li>
-        <li>
-          <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stackoverflow</a>
-        </li>
-      </ul>
-    </div>
+    <div id="consoleContent">
+      <template id="cmdOutputTpl">
+          <div class="cmdOutput">
+          </div>
+      </template>
+      <template id="cmdInputTpl">
+          <div class="cmdInput">
+          </div>
+      </template>
 
-    <div class="command">
-        <span class="location">[<span class="user">shaun</span><span class="address">@shaun.fr</span> <span class="pwd">~</span>]$ </span>./show_links "little things I've done"
+      <div class="cmdOutput">
+        <p>
+          Last update: Wed, 24 Jan 2018 15:45:54 GMT (`${new Date().toUTCString()}`)
+        </p>
+        <p>
+        </p>
+        <p>
+          Here are some links about me.
+        </p>
+      </div>
+      <div class="cmdInput">
+        showLinks('profiles');
+      </div>
+      <div class="cmdOutput">
+        <ul>
+          <li>
+            <a href="https://github.com/Chonne">Github</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/shaun-lecathelinais-91b51825">Linkedin</a>
+          </li>
+          <li>
+            <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stackoverflow</a>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="cmdInput">
+          showLinks('little things I\'ve done')
+      </div>
+      <div class="cmdOutput">
+        <ul>
+          <li>
+            <a href="https://algolia-mvc.shaun.fr/">A tiny demo made for an interview</a>
+          </li>
+          <li>
+            <a href="https://taco-spolsky.github.io/?level=________&amp;_____valueOf#|checksum=9521851|Shaun%20Lecathelinais" title="This was the answer for one of Trello's front-end developer recruitment tests">Proof that Trello's Taco recommends me</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="output">
-      <ul>
-        <li>
-          <a href="https://algolia-mvc.shaun.fr/">A tiny demo made for an interview</a>
-        </li>
-        <li>
-          <a href="https://taco-spolsky.github.io/?level=________&amp;_____valueOf#|checksum=9521851|Shaun%20Lecathelinais" title="This was the answer for one of Trello's front-end developer recruitment tests">Proof that Trello's Taco recommends me</a>
-        </li>
-      </ul>
+    <div id="consoleInputCt">
+      <textarea id="consoleInput" rows="1"></textarea>
     </div>
-
-    <div class="command current">
-        <span class="location">[<span class="user">shaun</span><span class="address">@shaun.fr</span> <span class="pwd">~</span>]$ </span><span id="cursor"></span>
-    </div>
-  </section>
-  <section id="other">
-    Nothing here, really.
   </section>
 
   <footer>
-    Really, nothing at all!
+    This is some kind of playground. <a href="https://github.com/Chonne/personal-website">Fork it</a> if you like. <a href="mailto:shnuq@hotmail.com">Contact me</a> for whatever reason.
   </footer>
 
   <script>
-    document.getElementById('cursor').addEventListener('click', () => {
-      alert('Sorry, this isn\'t a real console');
-    });
+    // todo: use modules. This is only to have a scope
+    (function App(window) {
+      const console = {
+        ...window.console,
+        log: consoleLog,
+        error: consoleError,
+      };
+
+      let consoleContent = document.getElementById('consoleContent');
+      let consoleInput = document.getElementById('consoleInput');
+      let templateCmdOutput = document.getElementById('cmdOutputTpl').content;
+      let templateCmdInput = document.getElementById('cmdInputTpl').content;
+      
+      function consoleLog() {
+        templateCmdOutput.querySelector('.cmdOutput').innerHTML = Array.prototype.join.call(arguments, '<br>');
+        consoleContent.appendChild(document.importNode(templateCmdOutput, true));
+
+        window.console.log.apply(this, arguments);
+      }
+
+      function saveInput(cmd) {
+        templateCmdInput.querySelector('.cmdInput').innerHTML = cmd.replace(/\n/, '<br>');
+        consoleContent.appendChild(document.importNode(templateCmdInput, true));
+      }
+
+      function consoleError() {
+        let outputEl = templateCmdOutput.querySelector('.cmdOutput');
+        outputEl.innerHTML = Array.prototype.join.call(arguments, '<br>');
+        outputEl.classList.add('error');
+        consoleContent.appendChild(document.importNode(templateCmdOutput, true));
+
+        window.console.error.apply(this, arguments);
+      }
+
+      function resetInput(defaultContent = '') {
+        consoleInput.value = defaultContent;
+        consoleInput.focus();
+      }
+
+      function execCommand(cmd) {
+        saveInput(cmd);
+        try {
+          const output = eval(cmd);
+          consoleLog(output);
+        } catch(error) {
+          consoleError(error);
+        }
+        resetInput();
+      }
+
+      consoleInput.addEventListener('keypress', function inputKeyPress(e) {
+        if (e.keyCode === 13 && (!e.shiftKey || e.ctrlKey)) {
+          execCommand(this.value);
+          e.preventDefault();
+        }
+      });
+
+      resetInput();
+    })(window);
   </script>
 </body>
 

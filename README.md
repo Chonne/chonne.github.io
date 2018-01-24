@@ -1,5 +1,5 @@
 # personal-website
-My personal website, hosted there: https://shaun.fr.
+My personal website, hosted there: https://shaun.fr. Development version is there: https://shaun.fr/index_dev.html
 
 It's a simple playground as I wanted to re-code something I've done for Nintendo ERD a few years ago, in a bigger project: an input/output console, similar to Chrome's devtools'.
 

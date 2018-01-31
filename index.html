@@ -39,7 +39,7 @@
 
     #fakeConsole .cmdOutput,
     #fakeConsole .cmdInput {
-      white-space: pre-line;
+      white-space: pre;
     }
 
     #fakeConsole .cmdOutput a {
@@ -75,21 +75,16 @@
       </template>
 
       <div class="cmdOutput">Last update: Wed, 24 Jan 2018 15:45:54 GMT (`${new Date().toUTCString()}`)
-Here are some links about me.
-      </div>
+Here are some links about me.</div>
 
-      <div class="cmdInput">showLinks('profiles');
-      </div>
+      <div class="cmdInput">showLinks('profiles');</div>
       <div class="cmdOutput">* <a href="https://github.com/Chonne">Github</a>
 * <a href="https://www.linkedin.com/in/shaun-lecathelinais-91b51825">Linkedin</a>
-* <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stackoverflow</a>
-      </div>
+* <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stackoverflow</a></div>
   
-      <div class="cmdInput">showLinks('little things I\'ve done')
-      </div>
+      <div class="cmdInput">showLinks('little things I\'ve done');</div>
       <div class="cmdOutput">* <a href="https://algolia-mvc.shaun.fr/">A tiny demo made for an interview</a>
-* <a href="https://taco-spolsky.github.io/?level=________&amp;_____valueOf#|checksum=9521851|Shaun%20Lecathelinais" title="This was the answer for one of Trello's front-end developer recruitment tests">Proof that Trello's Taco recommends me</a>
-      </div>
+* <a href="https://taco-spolsky.github.io/?level=________&amp;_____valueOf#|checksum=9521851|Shaun%20Lecathelinais" title="This was the answer for one of Trello's front-end developer recruitment tests">Proof that Trello's Taco recommends me</a></div>
     </div>
     <div id="consoleInputCt">
       <textarea id="consoleInput" rows="1"></textarea>

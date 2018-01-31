@@ -138,11 +138,11 @@
       let templateCmdOutput = document.getElementById('cmdOutputTpl').content;
       let templateCmdInput = document.getElementById('cmdInputTpl').content;
       
-      function consoleLog() {
-        templateCmdOutput.querySelector('.cmdOutput').innerHTML = Array.prototype.join.call(arguments, '<br>');
+      function consoleLog(...messages) {
+        templateCmdOutput.querySelector('.cmdOutput').innerHTML = messages.join('\t');
         consoleContent.appendChild(document.importNode(templateCmdOutput, true));
 
-        window.console.log.apply(this, arguments);
+        window.console.log.apply(this, messages);
       }
 
       function saveInput(cmd) {
@@ -150,9 +150,9 @@
         consoleContent.appendChild(document.importNode(templateCmdInput, true));
       }
 
-      function consoleError() {
+      function consoleError(...messages) {
         let outputEl = templateCmdOutput.querySelector('.cmdOutput');
-        outputEl.innerHTML = Array.prototype.join.call(arguments, '<br>');
+        outputEl.innerHTML = messages.join('\t');
         outputEl.classList.add('error');
         consoleContent.appendChild(document.importNode(templateCmdOutput, true));
 

@@ -37,35 +37,17 @@
       list-style-type: square;
     }
 
-    #fakeConsole .location .user {
-      color: rgb(87, 177, 255);
+    #fakeConsole .cmdOutput,
+    #fakeConsole .cmdInput {
+      white-space: pre-line;
     }
 
-    #fakeConsole .location .address {
-      color: aquamarine;
-    }
-
-    #fakeConsole .location .pwd {
-      color: yellow;
-    }
-
-    #fakeConsole .output a {
+    #fakeConsole .cmdOutput a {
       color: rgb(129, 129, 255);
     }
 
-    #fakeConsole .output a:hover {
+    #fakeConsole .cmdOutput a:hover {
       color: rgb(190, 190, 255);
-    }
-
-    #cursor {
-      width: 0.5em;
-      height: 0.7em;
-      border-bottom: 2px solid white;
-      display: inline-block;
-      animation-name: blinker;
-      animation-iteration-count: infinite;
-      animation-timing-function: cubic-bezier(1.0,0,0,1.0);
-      animation-duration: 1s;
     }
 
     header, footer {

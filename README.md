@@ -5,11 +5,12 @@ It's a simple playground as I wanted to re-code something I've done for Nintendo
 
 Unlike in my other project, This one is purely local. Its aim is mainly to display a few personal links, and show that I can code some kind of POC quickly in vanilla JS.
 
-Until stated otherwise, it'll be a work in progress, as there are still many things I want to change:
+Until stated otherwise, it'll be a work in progress, as there are still many things I want to change/add:
 - style
 - refactor into separate files (css, js)
 - refactor JS into modules
 - automatic execution of methods (to display links)
 - command history
 - better input/output handling (eg html code)
+- create a scope for the console's code execution (variables aren't stored as expected)
 - why not turn this into a real project, such as a language agnostic console?

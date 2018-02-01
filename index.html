@@ -26,20 +26,47 @@
     
     #fakeConsole {
       flex: 1;
+      display: flex;
+      flex-direction: column;
       font-family: Courier New, Courier, monospace;
       background: rgb(12,12,12);
       color: rgb(204,204,204);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    #fakeConsole ul {
-      padding-left: 2em;
-      list-style-type: square;
+    #consoleContent {
+      padding-left: 15px;
     }
 
     #fakeConsole .cmdOutput,
     #fakeConsole .cmdInput {
       white-space: pre;
+    }
+
+    #fakeConsole .cmdOutput:before,
+    #fakeConsole .cmdInput:before {
+      color: rgb(142, 142, 142);
+    }
+
+    #fakeConsole .cmdOutput:before {
+      margin-left: -10px;
+      content: "\2039";
+    }
+
+    #fakeConsole .cmdOutput.error,
+    #fakeConsole .cmdOutput.error:before {
+      color: red;
+    }
+
+    #fakeConsole .cmdOutput.error:before {
+      /* margin-left: -14px;
+      content: "\26a0"; */
+    }
+
+    #fakeConsole .cmdInput:before {
+      margin-left: -14px;
+      margin-right: 4px;
+      content: "\203a";
     }
 
     #fakeConsole .cmdOutput a {
@@ -48,6 +75,21 @@
 
     #fakeConsole .cmdOutput a:hover {
       color: rgb(190, 190, 255);
+    }
+
+    #consoleInputCt {
+      flex: 1;
+      display: flex;
+    }
+
+    #consoleInput {
+      resize: none;
+      width: 100%;
+      border: 0px;
+      padding: 0px;
+      outline: none;
+      background: black;
+      color: white;
     }
 
     header, footer {
@@ -61,7 +103,7 @@
 
 <body>
   <header>
-    Welcome to my personal playground. It's a simple (unfinished) javascript console, similar to devtools', but not as evolved.
+    Welcome to my personal playground. It's a simple (unfinished) javascript console, similar to devtools', but not as evolved, and in its early stages.
   </header>
   <section id="fakeConsole">
     <div id="consoleContent">
@@ -74,17 +116,16 @@
         </div>
       </template>
 
-      <div class="cmdOutput">Last update: Wed, 24 Jan 2018 15:45:54 GMT (`${new Date().toUTCString()}`)
-Here are some links about me.</div>
+      <div class="cmdOutput">Here are some links about me.</div>
 
       <div class="cmdInput">showLinks('profiles');</div>
-      <div class="cmdOutput">* <a href="https://github.com/Chonne">Github</a>
-* <a href="https://www.linkedin.com/in/shaun-lecathelinais-91b51825">Linkedin</a>
-* <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stackoverflow</a></div>
+      <div class="cmdOutput">&bull; <a href="https://github.com/Chonne">Github</a>
+&bull; <a href="https://www.linkedin.com/in/shaun-lecathelinais-91b51825">Linkedin</a>
+&bull; <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stackoverflow</a></div>
   
       <div class="cmdInput">showLinks('little things I\'ve done');</div>
-      <div class="cmdOutput">* <a href="https://algolia-mvc.shaun.fr/">A tiny demo made for an interview</a>
-* <a href="https://taco-spolsky.github.io/?level=________&amp;_____valueOf#|checksum=9521851|Shaun%20Lecathelinais" title="This was the answer for one of Trello's front-end developer recruitment tests">Proof that Trello's Taco recommends me</a></div>
+      <div class="cmdOutput">&bull; <a href="https://algolia-mvc.shaun.fr/">A tiny demo made for an interview</a>
+&bull; <a href="https://taco-spolsky.github.io/?level=________&amp;_____valueOf#|checksum=9521851|Shaun%20Lecathelinais" title="This was the answer for one of Trello's front-end developer recruitment tests">Proof that Trello's Taco recommends me</a></div>
     </div>
     <div id="consoleInputCt">
       <textarea id="consoleInput" rows="1"></textarea>
@@ -92,7 +133,7 @@ Here are some links about me.</div>
   </section>
 
   <footer>
-    This is some kind of playground. <a href="https://github.com/Chonne/personal-website">Fork it</a> if you like. <a href="mailto:shnuq@hotmail.com">Contact me</a> for whatever reason.
+    This is only a playground, some kind of POC. <a href="https://github.com/Chonne/personal-website">Fork it</a> if you like. <a href="mailto:shnuq@hotmail.com">Contact me</a> for whatever reason.
   </footer>
 
   <script>
@@ -155,7 +196,7 @@ Here are some links about me.</div>
         }
       });
 
-      resetInput('for (let i = 0; i < 5; i++) {\n  console.log(\'i = \', i);\n}');
+      resetInput('// Here\'s some sample code\nfor (let i = 0; i < 5; i++) {\n  console.log(\'i = \', i);\n}');
     })(window);
   </script>
 </body>

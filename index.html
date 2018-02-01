@@ -110,8 +110,9 @@ Here are some links about me.</div>
       let templateCmdInput = document.getElementById('cmdInputTpl').content;
       
       function consoleLog(...messages) {
-        templateCmdOutput.querySelector('.cmdOutput').innerHTML = messages.join('\t');
-        consoleContent.appendChild(document.importNode(templateCmdOutput, true));
+        let templateCmdOutputClone = document.importNode(templateCmdOutput, true);
+        templateCmdOutputClone.querySelector('.cmdOutput').innerHTML = messages.join('\t');
+        consoleContent.appendChild(templateCmdOutputClone);
 
         window.console.log.apply(this, messages);
       }
@@ -122,10 +123,11 @@ Here are some links about me.</div>
       }
 
       function consoleError(...messages) {
-        let outputEl = templateCmdOutput.querySelector('.cmdOutput');
+        let templateCmdOutputClone = document.importNode(templateCmdOutput, true);
+        let outputEl = templateCmdOutputClone.querySelector('.cmdOutput');
         outputEl.innerHTML = messages.join('\t');
         outputEl.classList.add('error');
-        consoleContent.appendChild(document.importNode(templateCmdOutput, true));
+        consoleContent.appendChild(document.importNode(templateCmdOutputClone, true));
 
         window.console.error.apply(this, arguments);
       }

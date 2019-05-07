@@ -63,6 +63,11 @@
       content: "\26a0"; */
     }
 
+    #fakeConsole .cmdOutput.undefined,
+    #fakeConsole .cmdOutput.undefined:before {
+      color: rgb(102, 102, 102);
+    }
+
     #fakeConsole .cmdInput:before {
       margin-left: -14px;
       margin-right: 4px;
@@ -103,7 +108,7 @@
 
 <body>
   <header>
-    Welcome to my personal playground. It's a simple (unfinished) javascript console, similar to devtools', but not as evolved, and in its early stages.
+    Welcome to my personal playground. It's a simple (unfinished) javascript console, similar to devtools', but not as evolved (ie no context nor autocompletion), and in its early stages.
   </header>
   <section id="fakeConsole">
     <div id="consoleContent">
@@ -151,8 +156,18 @@
       let templateCmdInput = document.getElementById('cmdInputTpl').content;
       
       function consoleLog(...messages) {
+        let messagesAsStr = messages.join('\t');
+        let classList = [];
+        if (messagesAsStr === undefined || (messages[0] === undefined && messagesAsStr === '')) {
+          messagesAsStr = 'undefined';
+          classList.push('undefined');
+        }
+
         let templateCmdOutputClone = document.importNode(templateCmdOutput, true);
-        templateCmdOutputClone.querySelector('.cmdOutput').innerHTML = messages.join('\t');
+        let outputEl = templateCmdOutputClone.querySelector('.cmdOutput')
+        outputEl.innerHTML = messagesAsStr;
+        outputEl.classList.add(...classList);
+
         consoleContent.appendChild(templateCmdOutputClone);
 
         window.console.log.apply(this, messages);

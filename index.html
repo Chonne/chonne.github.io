@@ -1,219 +1,25 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hi!</title>
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root">
+      <header id="links">
+        <a href="https://github.com/Chonne">GitHub</a>
+        <a href="https://www.linkedin.com/in/shaun-lecathelinais-91b51825">LinkedIn</a>
+        <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stack Overflow</a>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hi!</title>
-  <style>
-    /* animations */
-    @keyframes blinker {
-      from { opacity: 1.0; }
-      to { opacity: 0.0; }
-    }
-
-    /* all styles */
-    body {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
-
-    body,
-    #fakeConsole div,
-    #fakeConsole ul {
-      margin: 0;
-    }
-    
-    #fakeConsole {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      font-family: Courier New, Courier, monospace;
-      background: rgb(12,12,12);
-      color: rgb(204,204,204);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    #consoleContent {
-      padding-left: 15px;
-    }
-
-    #fakeConsole .cmdOutput,
-    #fakeConsole .cmdInput {
-      white-space: pre;
-    }
-
-    #fakeConsole .cmdOutput:before,
-    #fakeConsole .cmdInput:before {
-      color: rgb(142, 142, 142);
-    }
-
-    #fakeConsole .cmdOutput:before {
-      margin-left: -10px;
-      content: "\2039";
-    }
-
-    #fakeConsole .cmdOutput.error,
-    #fakeConsole .cmdOutput.error:before {
-      color: red;
-    }
-
-    #fakeConsole .cmdOutput.error:before {
-      /* margin-left: -14px;
-      content: "\26a0"; */
-    }
-
-    #fakeConsole .cmdOutput.undefined,
-    #fakeConsole .cmdOutput.undefined:before {
-      color: rgb(102, 102, 102);
-    }
-
-    #fakeConsole .cmdInput:before {
-      margin-left: -14px;
-      margin-right: 4px;
-      content: "\203a";
-    }
-
-    #fakeConsole .cmdOutput a {
-      color: rgb(129, 129, 255);
-    }
-
-    #fakeConsole .cmdOutput a:hover {
-      color: rgb(190, 190, 255);
-    }
-
-    #consoleInputCt {
-      flex: 1;
-      display: flex;
-    }
-
-    #consoleInput {
-      resize: none;
-      width: 100%;
-      border: 0px;
-      padding: 0px;
-      outline: none;
-      background: black;
-      color: white;
-    }
-
-    header, footer {
-      padding: 2px 5px;
-      background-color: #e8e8e8;
-      font-family: sans-serif;
-      font-size: 0.8em;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    Welcome to my personal playground. It's a simple (unfinished) javascript console, similar to devtools', but not as evolved (ie no context nor autocompletion), and in its early stages.
-  </header>
-  <section id="fakeConsole">
-    <div id="consoleContent">
-      <template id="cmdOutputTpl">
-        <div class="cmdOutput">
-        </div>
-      </template>
-      <template id="cmdInputTpl">
-        <div class="cmdInput">
-        </div>
-      </template>
-
-      <div class="cmdOutput">Here are some links about me.</div>
-
-      <div class="cmdInput">showLinks('profiles');</div>
-      <div class="cmdOutput">&bull; <a href="https://github.com/Chonne">Github</a>
-&bull; <a href="https://www.linkedin.com/in/shaun-lecathelinais-91b51825">Linkedin</a>
-&bull; <a href="https://stackoverflow.com/users/1372543/shaun-lecathelinais">Stackoverflow</a></div>
-  
-      <div class="cmdInput">showLinks('little things I\'ve done');</div>
-      <div class="cmdOutput">&bull; <a href="https://algolia-mvc.shaun.fr/">A tiny demo made for an interview</a>
-&bull; <a href="https://taco-spolsky.github.io/?level=________&amp;_____valueOf#|checksum=9521851|Shaun%20Lecathelinais" title="This was the answer for one of Trello's front-end developer recruitment tests">Proof that Trello's Taco recommends me</a></div>
+        <span id="fork">This is only a playground, a place to store links. <a href="https://github.com/Chonne/personal-website">Fork it</a> if you like.</span>
+      </header>
+      <div id="bricksCt">
+        <template id="brickTpl">
+          <span></span>
+        </template>
+      </div>
     </div>
-    <div id="consoleInputCt">
-      <textarea id="consoleInput" rows="1"></textarea>
-    </div>
-  </section>
-
-  <footer>
-    This is only a playground, some kind of POC. <a href="https://github.com/Chonne/personal-website">Fork it</a> if you like. <a href="mailto:shaun@shaun.fr">Contact me</a> for whatever reason.
-  </footer>
-
-  <script>
-    // todo: use modules. This is only to have a scope
-    (function App(window) {
-      const console = {
-        ...window.console,
-        log: consoleLog,
-        error: consoleError,
-      };
-
-      let consoleContent = document.getElementById('consoleContent');
-      let consoleInput = document.getElementById('consoleInput');
-      let templateCmdOutput = document.getElementById('cmdOutputTpl').content;
-      let templateCmdInput = document.getElementById('cmdInputTpl').content;
-      
-      function consoleLog(...messages) {
-        let messagesAsStr = messages.join('\t');
-        let classList = [];
-        if (messagesAsStr === undefined || (messages[0] === undefined && messagesAsStr === '')) {
-          messagesAsStr = 'undefined';
-          classList.push('undefined');
-        }
-
-        let templateCmdOutputClone = document.importNode(templateCmdOutput, true);
-        let outputEl = templateCmdOutputClone.querySelector('.cmdOutput')
-        outputEl.innerHTML = messagesAsStr;
-        outputEl.classList.add(...classList);
-
-        consoleContent.appendChild(templateCmdOutputClone);
-
-        window.console.log.apply(this, messages);
-      }
-
-      function saveInput(cmd) {
-        templateCmdInput.querySelector('.cmdInput').innerHTML = cmd.replace(/\n/, '<br>');
-        consoleContent.appendChild(document.importNode(templateCmdInput, true));
-      }
-
-      function consoleError(...messages) {
-        let templateCmdOutputClone = document.importNode(templateCmdOutput, true);
-        let outputEl = templateCmdOutputClone.querySelector('.cmdOutput');
-        outputEl.innerHTML = messages.join('\t');
-        outputEl.classList.add('error');
-        consoleContent.appendChild(document.importNode(templateCmdOutputClone, true));
-
-        window.console.error.apply(this, arguments);
-      }
-
-      function resetInput(defaultContent = '') {
-        consoleInput.value = defaultContent;
-        consoleInput.focus();
-      }
-
-      function execCommand(cmd) {
-        saveInput(cmd);
-        try {
-          const output = eval(cmd);
-          consoleLog(output);
-        } catch(error) {
-          consoleError(error);
-        }
-        resetInput();
-      }
-
-      consoleInput.addEventListener('keypress', function inputKeyPress(e) {
-        if (e.keyCode === 13 && (!e.shiftKey || e.ctrlKey)) {
-          execCommand(this.value);
-          e.preventDefault();
-        }
-      });
-
-      resetInput('// Here\'s some sample code\nfor (let i = 0; i < 5; i++) {\n  console.log(\'i = \', i);\n}');
-    })(window);
-  </script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>

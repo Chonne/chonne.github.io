@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // todo: display help about keyboard shortcuts when pressing "?" key
 
   const steps = 15
-  const brickRawWidth = 10
+  const brickRawWidth = 40
   const brickWidth = brickRawWidth + 2 // include borders and margins
   document.documentElement.style.setProperty('--brick-width', `${brickRawWidth}px`)
 

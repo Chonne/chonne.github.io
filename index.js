@@ -1,5 +1,4 @@
-
-document.addEventListener("DOMContentLoaded", () => {
+const initEls = () => {
   // todo: press shift to reverse steps
   // todo: press ctrl and click to reset to white or black
   // todo: display help about keyboard shortcuts when pressing "?" key
@@ -71,7 +70,64 @@ document.addEventListener("DOMContentLoaded", () => {
     bricksCt.style.height = `${height}px`
   }
 
-  resetCt()
-  generateEls()
-  addEvents()
+  const init = () => {
+    resetCt()
+    generateEls()
+    addEvents()
+  }
+
+  return {
+    init,
+  }
+}
+
+const initAnim = () => {
+  const loopEveryNbFrames = 10
+  let nbFrames = loopEveryNbFrames
+  let animLoop
+
+  const getRandEl = () => {
+    const els = document.getElementById('bricksCt').querySelectorAll('span')
+    const randomNum = Math.floor(Math.random()*(els.length))
+    return els[randomNum]
+  }
+
+  const simulateHoverOnEl = (el) => {
+    const event = new MouseEvent('mouseover', {
+      view: window,
+      bubbles: true,
+      cancelable: true,
+    })
+
+    el.dispatchEvent(event)
+  }
+
+  const beginAnimLoop = () => {
+    nbFrames++
+    console.log(nbFrames)
+    if (nbFrames >= loopEveryNbFrames) {
+      nbFrames = 0
+      simulateHoverOnEl(getRandEl())
+    }
+
+    animLoop = window.requestAnimationFrame(beginAnimLoop)
+  }
+
+  const cancelAnimLoop = () => {
+    clearTimeout(animLoop)
+    window.cancelAnimationFrame(animLoop)
+  }
+
+  return {
+    begin: beginAnimLoop,
+    cancel: cancelAnimLoop,
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // todo: add button to pause/unpause hover animation
+  initEls().init()
+
+  window.animLoop = initAnim()
+  window.animLoop.begin()
 })

@@ -104,7 +104,6 @@ const initAnim = () => {
 
   const beginAnimLoop = () => {
     nbFrames++
-    console.log(nbFrames)
     if (nbFrames >= loopEveryNbFrames) {
       nbFrames = 0
       simulateHoverOnEl(getRandEl())

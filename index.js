@@ -128,5 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initEls().init()
 
   window.animLoop = initAnim()
-  window.animLoop.begin()
+  // uncomment this once a toggle button has been added
+  // window.animLoop.begin()
 })

@@ -1,0 +1,207 @@
+{
+  "experiences": [
+    {
+      "begin": "2025-12-01",
+      "end": "2026-01-30",
+      "company": "Qare",
+      "description": "Create CRUD endpoints to manage prescription templates linked to diagnoses that practitioners can use to quickly fill prescriptions for their patients.",
+      "stack": ["typescript", "nestjs", "mongodb"]
+    },
+    {
+      "begin": "2025-07-01",
+      "end": "2025-11-30",
+      "company": "Qare",
+      "description": "Implemented realtime transcription of audio streams during teleconsultations using Vonage's Audio-Connector and OpenAI's realtime API. Transcriptions are then summarized using OpenAI and made available to practitioners.",
+      "stack": ["typescript", "nestjs", "mongodb", "vonage", "websockets", "openai", "redis"]
+    },
+    {
+      "begin": "2025-05-21",
+      "end": "2025-06-30",
+      "company": "Qare",
+      "description": "Helped out a team during a rushing period to finish implementing the MVP of the care plan program feature, used for weight management and mental health",
+      "stack": ["typescript", "nestjs", "mongodb"]
+    },
+    {
+      "begin": "2025-01-01",
+      "end": "2025-05-20",
+      "company": "Qare",
+      "description": "Improvements related to fetching and storing normalized responses from Intellio's API to keep track of care sheets",
+      "stack": ["typescript", "nestjs", "mongodb"]
+    },
+    {
+      "begin": "2024-10-01",
+      "end": "2024-12-31",
+      "company": "Qare",
+      "description": "Various improvements and fixes in multiple services, mostly revolving around automatically transmitting consultation details to healthcare systems to get reimbursed.",
+      "stack": ["flow", "typescript", "loopback 2", "nestjs", "mongodb", "mysql"]
+    },
+    {
+      "begin": "2024-07-01",
+      "end": "2024-10-31",
+      "company": "Qare",
+      "description": "Created a queue listening service that ingests messages generated when files are added to an s3 bucket. Those files are downloaded by the service and scanned using ClamAV. The scan result (healthy or infected) is then inserted into a tag linked to the object on S3.",
+      "stack": ["typescript", "s3", "sqs", "sns", "clamav"]
+    },
+    {
+      "begin": "2024-04-01",
+      "end": "2024-06-30",
+      "company": "Qare",
+      "description": "Some documents were accessible publicly without requiring any real authentication. We added an encrypted password, stored in mongodb and displayed decrypted in a pdf accessible to authorized users.\nThe frontend was adapted by another developer to support both the current GET endpoint to get a document that doesn't have a password and a new POST endpoint that requires a password.",
+      "stack": ["flow", "loopback 2", "mongodb"]
+    },
+    {
+      "begin": "2024-02-01",
+      "end": "2024-04-30",
+      "company": "Qare",
+      "description": "Studied and prepared the replacement of a service that helps medical practitioners search for medical drugs when preparing prescriptions. The current solution is based on an OpenSearch database and an external API. The new solution will be to only use other external APIs from a different vendor, some REST, others graphql.\nA new microservice based on an internal boilerplate was also prepared and used for a basic POC.",
+      "stack": ["nestjs", "typescript"]
+    },
+    {
+      "begin": "2024-01-01",
+      "end": "2024-01-31",
+      "company": "Qare",
+      "description": "Upgrading, debugging, optimizing our current audio/video streaming solution based on Vonage/Opentok",
+      "stack": ["nestjs", "typescript", "opentok", "websockets"]
+    },
+    {
+      "begin": "2023-12-01",
+      "end": "2023-12-31",
+      "company": "Qare",
+      "description": "Various studies and developments of our apis to improve security to validate official requirements",
+      "stack": ["flow", "typescript", "nestjs", "loopback 2", "mongodb", "mysql"]
+    },
+    {
+      "begin": "2023-09-01",
+      "end": "2023-11-30",
+      "company": "Qare",
+      "description": "Upgraded, added and studied functionalities (mostly CRUD and searching) to a legacy codebase to validate official government new requirements for telehealth/telemedicine companies, some related to security",
+      "stack": ["javascript", "flow", "loopback 2", "mongodb", "mocha"]
+    },
+    {
+      "begin": "2023-08-01",
+      "end": "2023-09-30",
+      "company": "Qare",
+      "description": "Rewrote CRUD functionalities (services, use-cases, controllers) from an old manual script to something more modern to automate sending payments via Stripe",
+      "stack": ["javascript", "flow", "typescript", "express", "mysql", "sequelize", "mocha"]
+    },
+    {
+      "begin": "2022-09-01",
+      "end": "2023-08-31",
+      "company": "self-employed",
+      "description": "Various hometasks for tech recruitment processes",
+      "stack": ["javascript", "typescript", "nodejs", "deno", "nestjs"]
+    },
+    {
+      "begin": "2022-02-01",
+      "end": "2022-08-31",
+      "company": "Voodoo",
+      "description": "Continued contribution to improving the infrastructure and developer tools.",
+      "stack": ["aws", "docker", "kubernetes", "argocd", "circleci", "kustomize", "helm", "terraform", "prometheus"]
+    },
+    {
+      "begin": "2022-02-01",
+      "end": "2022-02-28",
+      "company": "Voodoo",
+      "description": "Improved provision and automatic updates to developers of helper scripts meant to be used in their browsers. The first script's purpose was to display the current aws organization's name in aws' console.",
+      "stack": ["javascript", "violentmonkey", "github pages"]
+    },
+    {
+      "begin": "2022-01-01",
+      "end": "2022-01-31",
+      "company": "Voodoo",
+      "description": "Added a command to an existing CLI to help developers include all their aws org profiles into their local aws-cli configuration file",
+      "stack": ["Go", "aws-cli"]
+    },
+    {
+      "begin": "2021-01-01",
+      "end": "2021-12-31",
+      "company": "Voodoo",
+      "description": "Contributed to a team wide effort to:\n- move k8s clusters from Rancher instances to aws eks\n- move resources from an aws org to another (s3, rds, lambda)\n- move a django app from aws EB to a containerized k8s service\n- add, upgrade and automate CI and CD config for existing services\n- add, upgrade performance dashboards and alerting in grafana and prometheus",
+      "stack": ["aws", "docker", "kubernetes", "argocd", "circleci", "kustomize", "helm", "terraform", "prometheus"]
+    },
+    {
+      "begin": "2019-10-01",
+      "end": "2020-12-31",
+      "company": "Voodoo",
+      "description": "Among a team of 5 developers: worked on the game publishing dashboard used to analyze KPIs from our studios' games and their ads. Contributed",
+      "stack": ["javascript", "express", "fastify", "nodejs", "python", "django", "postgresql", "aws (lambda, sqs, sns, s3, redis, eb)", "vue.js", "kubernetes"]
+    },
+    {
+      "begin": "2019-03-01",
+      "end": "2019-09-30",
+      "company": "Voodoo",
+      "description": "Technical lead: automate the creation of user acquisition campaigns in multiple ad services. Some had APIs (facebook), others required mimicking user inputs using a headless browser",
+      "stack": ["javascript", "koa", "nodejs", "vue.js", "postgresql", "aws (sqs, sns, ecs)", "puppeteer"]
+    },
+    {
+      "begin": "2018-09-01",
+      "end": "2019-02-28",
+      "company": "Voodoo",
+      "description": "Technical lead, project Voodoo lite: created a self publishing platform for hypercasual games, allowing small studios to publish and monetize their games with minimal effort. Along with another developer, handled the frontend, backend, infrastructure and devops aspects of the project. A technical lead was responsible for most of the infrastructure's design",
+      "stack": ["javascript", "nodejs", "express", "python", "django", "postgresql", "aws (sqs, sns, ecs, eb)", "vue.js"]
+    },
+    {
+      "begin": "2018-03-01",
+      "end": "2019-08-31",
+      "company": "Voodoo",
+      "description": "Automate user input in a private api hosted by Mopub (ad mediation solution) to create and update monetization waterfalls based on daily user-data",
+      "stack": ["typescript", "nodejs", "aws (lambda, sqs, sns, s3, redis)", "vue.js"]
+    },
+    {
+      "begin": "2017-09-01",
+      "end": "2018-02-28",
+      "company": "None",
+      "description": "Personal projects and learning time",
+      "stack": []
+    },
+    {
+      "begin": "2016-03-01",
+      "end": "2017-08-31",
+      "company": "Touch & Play",
+      "description": "Technical lead, project Eazeat: mobile app (ios and android) and web platform to order food and drinks in restaurants and have them delivered to your table or for takeaway. Responsible for the frontend and backend (api, db, devops). A coworker was responsible for the mobile apps. We worked with a few developers and sometimes contractors.",
+      "stack": ["React", "php5", "symfony", "couchdb"]
+    },
+    {
+      "begin": "2015-03-01",
+      "end": "2016-07-31",
+      "company": "Touch & Play",
+      "description": "- improvements to a suite of web apps used to process orders in restaurants. The waiters would select the ordered items and perform payments on ipods. The orders would be sent to ipads in the kitchen or bar.\n- automated the setup of NUCs containing the apps and db replicas. They were installed in the restaurants and continuously connected to our ec2 machines to help with remote management.",
+      "stack": ["php5", "symfony", "mysql", "javascript", "ec2", "centos"]
+    },
+    {
+      "begin": "2012-03-01",
+      "end": "2015-02-28",
+      "company": "Nintendo European Research & Development",
+      "description": "Worked alone or in small teams mostly on prototypes. Some were internal tools, others were tech demos, apps or games for the Wii U and Nintendo 3DS consoles. Very briefly used Emscripten to port C++ code to javascript for a web-based prototype. Created frontend and backend services in python to support some prototypes. Briefly used mysql and cassandra databases for some projects. The largest prototype was an IDE hosted in the browser, made with ExtJS and allowing developers to create and debug small apps and games using LUA and a custom debugger",
+      "stack": ["extjs", "javascript", "emscripten", "c++", "python", "mysql", "cassandra", "wiiu", "3ds", "php", "lua"]
+    },
+    {
+      "begin": "2010-12-01",
+      "end": "2012-02-28",
+      "company": "Mobiclip",
+      "description": "TODO",
+      "stack": ["php", "mysql", "javascript", "extjs", "video encoding"]
+    },
+    {
+      "begin": "2008-11-01",
+      "end": "2010-11-01",
+      "company": "INA",
+      "description": "Worked alongside a team of developers and designers to create and maintain the main public website, the professional one and other similar websites",
+      "stack": ["php", "symfony", "mysql", "javascript", "extjs"]
+    },
+    {
+      "begin": "2004-05-01",
+      "end": "2008-10-31",
+      "company": "RATP",
+      "description": "Worked alone or with another developer on multiple internal applications used by RATP employees. Developed using Windev for the frontend and php/mysql for web applications. Some apps were used to manage projects, others were more human resources related",
+      "stack": ["javascript", "jquery", "php 4", "mysql", "windev"]
+    },
+    {
+      "begin": "2003-11-01",
+      "end": "2004-04-30",
+      "company": "self-employed",
+      "description": "Working remotely with another developer based in the USA, improved and added functionalities to an e-commerce website, on both front-office and back-office",
+      "stack": ["javascript", "jquery", "php 4", "mysql 3", "paypal"]
+    }
+  ]
+}

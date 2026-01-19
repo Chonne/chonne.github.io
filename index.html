@@ -27,7 +27,7 @@
       <div class="container">
         <h1>Shaun Lecathelinais</h1>
         <p>Technical Lead & Software Engineer</p>
-        <div class="social-links">
+        <nav class="social-links" aria-label="Social media links">
           <a href="https://github.com/Chonne" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
             <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
               <path
@@ -47,636 +47,580 @@
               />
             </svg>
           </a>
-        </div>
+        </nav>
       </div>
     </header>
 
     <main class="container">
       <div class="timeline">
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">Qare</div>
-                <div class="company-duration">Aug 2023 - Jan 2026</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">Qare</h2>
+                <span class="company-duration"><time datetime="2023-08">Aug 2023</time> - <time datetime="2026-01">Jan 2026</time></span>
+              </header>
 
-              <div class="project">
-                <span class="date">Dec 2025 - Jan 2026</span>
-                <div class="card-title">
-                  <div class="title">Prescription Template Management System</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2025-12">Dec 2025</time> - <time datetime="2026-01">Jan 2026</time></span>
+                <h3 class="title">Prescription Template Management System</h3>
+                <p class="description">
                   Create CRUD endpoints to manage prescription templates linked to diagnoses that practitioners can use
                   to quickly fill prescriptions for their patients.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">nestjs</span>
-                  <span class="tech-badge">mongodb</span>
+                  <span>typescript</span>
+                  <span>nestjs</span>
+                  <span>mongodb</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Jul 2025 - Nov 2025</span>
-                <div class="card-title">
-                  <div class="title">Real-time Consultation Transcription & AI Summarization</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2025-07">Jul 2025</time> - <time datetime="2025-11">Nov 2025</time></span>
+                <h3 class="title">Real-time Consultation Transcription & AI Summarization</h3>
+                <p class="description">
                   Implemented realtime transcription of audio streams during teleconsultations using Vonage's
                   Audio-Connector and OpenAI's realtime API. Transcriptions are then summarized using OpenAI and made
                   available to practitioners.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">nestjs</span>
-                  <span class="tech-badge">mongodb</span>
-                  <span class="tech-badge">vonage</span>
-                  <span class="tech-badge">websockets</span>
-                  <span class="tech-badge">openai</span>
-                  <span class="tech-badge">redis</span>
+                  <span>typescript</span>
+                  <span>nestjs</span>
+                  <span>mongodb</span>
+                  <span>vonage</span>
+                  <span>websockets</span>
+                  <span>openai</span>
+                  <span>redis</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">May 2025 - Jun 2025</span>
-                <div class="card-title">
-                  <div class="title">Care Plan Program MVP</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2025-05">May 2025</time> - <time datetime="2025-06">Jun 2025</time></span>
+                <h3 class="title">Care Plan Program MVP</h3>
+                <p class="description">
                   Helped out a team during a rushing period to finish implementing the MVP of the care plan program
                   feature, used for weight management and mental health
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">nestjs</span>
-                  <span class="tech-badge">mongodb</span>
+                  <span>typescript</span>
+                  <span>nestjs</span>
+                  <span>mongodb</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Jan 2025 - May 2025</span>
-                <div class="card-title">
-                  <div class="title">Care Sheet Tracking Integration</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2025-01">Jan 2025</time> - <time datetime="2025-05">May 2025</time></span>
+                <h3 class="title">Care Sheet Tracking Integration</h3>
+                <p class="description">
                   Improvements related to fetching and storing normalized responses from Intellio's API to keep track of
                   care sheets
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">nestjs</span>
-                  <span class="tech-badge">mongodb</span>
+                  <span>typescript</span>
+                  <span>nestjs</span>
+                  <span>mongodb</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Oct 2024 - Dec 2024</span>
-                <div class="card-title">
-                  <div class="title">Healthcare Reimbursement Automation</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2024-10">Oct 2024</time> - <time datetime="2024-12">Dec 2024</time></span>
+                <h3 class="title">Healthcare Reimbursement Automation</h3>
+                <p class="description">
                   Various improvements and fixes in multiple services, mostly revolving around automatically
                   transmitting consultation details to healthcare systems to get reimbursed.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">flow</span>
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">loopback 2</span>
-                  <span class="tech-badge">nestjs</span>
-                  <span class="tech-badge">mongodb</span>
-                  <span class="tech-badge">mysql</span>
+                  <span>flow</span>
+                  <span>typescript</span>
+                  <span>loopback 2</span>
+                  <span>nestjs</span>
+                  <span>mongodb</span>
+                  <span>mysql</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Jul 2024 - Oct 2024</span>
-                <div class="card-title">
-                  <div class="title">Automated File Security Scanning Service</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2024-07">Jul 2024</time> - <time datetime="2024-10">Oct 2024</time></span>
+                <h3 class="title">Automated File Security Scanning Service</h3>
+                <p class="description">
                   Created a queue listening service that ingests messages generated when files are added to an s3
                   bucket. Those files are downloaded by the service and scanned using ClamAV. The scan result (healthy
                   or infected) is then inserted into a tag linked to the object on S3.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">s3</span>
-                  <span class="tech-badge">sqs</span>
-                  <span class="tech-badge">sns</span>
-                  <span class="tech-badge">clamav</span>
+                  <span>typescript</span>
+                  <span>s3</span>
+                  <span>sqs</span>
+                  <span>sns</span>
+                  <span>clamav</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Apr 2024 - Jun 2024</span>
-                <div class="card-title">
-                  <div class="title">Document Password Protection System</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2024-04">Apr 2024</time> - <time datetime="2024-06">Jun 2024</time></span>
+                <h3 class="title">Document Password Protection System</h3>
+                <p class="description">
                   Some documents were accessible publicly without requiring any real authentication. We added an
                   encrypted password, stored in mongodb and displayed decrypted in a pdf accessible to authorized users.
                   The frontend was adapted by another developer to support both the current GET endpoint to get a
                   document that doesn't have a password and a new POST endpoint that requires a password.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">flow</span>
-                  <span class="tech-badge">loopback 2</span>
-                  <span class="tech-badge">mongodb</span>
+                  <span>flow</span>
+                  <span>loopback 2</span>
+                  <span>mongodb</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Feb 2024 - Apr 2024</span>
-                <div class="card-title">
-                  <div class="title">Medical Drug Search Service Migration</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2024-02">Feb 2024</time> - <time datetime="2024-04">Apr 2024</time></span>
+                <h3 class="title">Medical Drug Search Service Migration</h3>
+                <p class="description">
                   Studied and prepared the replacement of a service that helps medical practitioners search for medical
                   drugs when preparing prescriptions. The current solution is based on an OpenSearch database and an
                   external API. The new solution will be to only use other external APIs from a different vendor, some
                   REST, others graphql. A new microservice based on an internal boilerplate was also prepared and used
                   for a basic POC.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">nestjs</span>
-                  <span class="tech-badge">typescript</span>
+                  <span>nestjs</span>
+                  <span>typescript</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Jan 2024</span>
-                <div class="card-title">
-                  <div class="title">Video Streaming Optimization</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <time class="date" datetime="2024-01/2024-01">Jan 2024</time>
+                <h3 class="title">Video Streaming Optimization</h3>
+                <p class="description">
                   Upgrading, debugging, optimizing our current audio/video streaming solution based on Vonage/Opentok
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">nestjs</span>
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">opentok</span>
-                  <span class="tech-badge">websockets</span>
+                  <span>nestjs</span>
+                  <span>typescript</span>
+                  <span>opentok</span>
+                  <span>websockets</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Dec 2023</span>
-                <div class="card-title">
-                  <div class="title">Security Compliance Improvements</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <time class="date" datetime="2023-12">Dec 2023</time>
+                <h3 class="title">Security Compliance Improvements</h3>
+                <p class="description">
                   Various studies and developments of our apis to improve security to validate official requirements
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">flow</span>
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">nestjs</span>
-                  <span class="tech-badge">loopback 2</span>
-                  <span class="tech-badge">mongodb</span>
-                  <span class="tech-badge">mysql</span>
+                  <span>flow</span>
+                  <span>typescript</span>
+                  <span>nestjs</span>
+                  <span>loopback 2</span>
+                  <span>mongodb</span>
+                  <span>mysql</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Sep 2023 - Nov 2023</span>
-                <div class="card-title">
-                  <div class="title">Government Compliance Updates</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2023-09">Sep 2023</time> - <time datetime="2023-11">Nov 2023</time></span>
+                <h3 class="title">Government Compliance Updates</h3>
+                <p class="description">
                   Upgraded, added and studied functionalities (mostly CRUD and searching) to a legacy codebase to
                   validate official government new requirements for telehealth/telemedicine companies, some related to
                   security
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">flow</span>
-                  <span class="tech-badge">loopback 2</span>
-                  <span class="tech-badge">mongodb</span>
-                  <span class="tech-badge">mocha</span>
+                  <span>javascript</span>
+                  <span>flow</span>
+                  <span>loopback 2</span>
+                  <span>mongodb</span>
+                  <span>mocha</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Aug 2023 - Sep 2023</span>
-                <div class="card-title">
-                  <div class="title">Stripe Payment Automation</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2023-08">Aug 2023</time> - <time datetime="2023-09">Sep 2023</time></span>
+                <h3 class="title">Stripe Payment Automation</h3>
+                <p class="description">
                   Rewrote CRUD functionalities (services, use-cases, controllers) from an old manual script to something
                   more modern to automate sending payments via Stripe
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">flow</span>
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">express</span>
-                  <span class="tech-badge">mysql</span>
-                  <span class="tech-badge">sequelize</span>
-                  <span class="tech-badge">mocha</span>
+                  <span>javascript</span>
+                  <span>flow</span>
+                  <span>typescript</span>
+                  <span>express</span>
+                  <span>mysql</span>
+                  <span>sequelize</span>
+                  <span>mocha</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">Self-Employed</div>
-                <div class="company-duration">Sep 2022 - Aug 2023</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">Self-Employed</h2>
+                <span class="company-duration"><time datetime="2022-09">Sep 2022</time> - <time datetime="2023-08">Aug 2023</time></span>
+              </header>
 
-              <div class="project">
-                <div class="card-title">
-                  <div class="title">Technical Assessment Projects</div>
-                </div>
-                <div class="description">Various hometasks for tech recruitment processes</div>
+              <section class="project">
+                <h3 class="title">Technical Assessment Projects</h3>
+                <p class="description">Various hometasks for tech recruitment processes</p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">nodejs</span>
-                  <span class="tech-badge">deno</span>
-                  <span class="tech-badge">nestjs</span>
+                  <span>javascript</span>
+                  <span>typescript</span>
+                  <span>nodejs</span>
+                  <span>deno</span>
+                  <span>nestjs</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">Voodoo</div>
-                <div class="company-duration">Mar 2018 - Aug 2022</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">Voodoo</h2>
+                <span class="company-duration"><time datetime="2018-03">Mar 2018</time> - <time datetime="2022-08">Aug 2022</time></span>
+              </header>
 
-              <div class="project">
-                <span class="date">Feb 2022 - Aug 2022</span>
-                <div class="card-title">
-                  <div class="title">Infrastructure & DevOps Improvements</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2022-02">Feb 2022</time> - <time datetime="2022-08">Aug 2022</time></span>
+                <h3 class="title">Infrastructure & DevOps Improvements</h3>
+                <p class="description">
                   Continued contribution to improving the infrastructure and developer tools.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">aws</span>
-                  <span class="tech-badge">docker</span>
-                  <span class="tech-badge">kubernetes</span>
-                  <span class="tech-badge">argocd</span>
-                  <span class="tech-badge">circleci</span>
-                  <span class="tech-badge">kustomize</span>
-                  <span class="tech-badge">helm</span>
-                  <span class="tech-badge">terraform</span>
-                  <span class="tech-badge">prometheus</span>
+                  <span>aws</span>
+                  <span>docker</span>
+                  <span>kubernetes</span>
+                  <span>argocd</span>
+                  <span>circleci</span>
+                  <span>kustomize</span>
+                  <span>helm</span>
+                  <span>terraform</span>
+                  <span>prometheus</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Feb 2022</span>
-                <div class="card-title">
-                  <div class="title">Browser Helper Scripts Distribution</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <time class="date" datetime="2022-02">Feb 2022</time>
+                <h3 class="title">Browser Helper Scripts Distribution</h3>
+                <p class="description">
                   Improved provision and automatic updates to developers of helper scripts meant to be used in their
                   browsers. The first script's purpose was to display the current aws organization's name in aws'
                   console.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">violentmonkey</span>
-                  <span class="tech-badge">github pages</span>
+                  <span>javascript</span>
+                  <span>violentmonkey</span>
+                  <span>github pages</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Jan 2022</span>
-                <div class="card-title">
-                  <div class="title">AWS CLI Configuration Tool</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <time class="date" datetime="2022-01">Jan 2022</time>
+                <h3 class="title">AWS CLI Configuration Tool</h3>
+                <p class="description">
                   Added a command to an existing CLI to help developers include all their aws org profiles into their
                   local aws-cli configuration file
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">Go</span>
-                  <span class="tech-badge">aws-cli</span>
+                  <span>Go</span>
+                  <span>aws-cli</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Jan 2021 - Dec 2021</span>
-                <div class="card-title">
-                  <div class="title">Cloud Infrastructure Migration</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2021-01">Jan 2021</time> - <time datetime="2021-12">Dec 2021</time></span>
+                <h3 class="title">Cloud Infrastructure Migration</h3>
+                <p class="description">
                   Contributed to a team wide effort to: move k8s clusters from Rancher instances to aws eks; move
                   resources from an aws org to another (s3, rds, lambda); move a django app from aws EB to a
                   containerized k8s service; add, upgrade and automate CI and CD config for existing services; add,
                   upgrade performance dashboards and alerting in grafana and prometheus
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">aws</span>
-                  <span class="tech-badge">docker</span>
-                  <span class="tech-badge">kubernetes</span>
-                  <span class="tech-badge">argocd</span>
-                  <span class="tech-badge">circleci</span>
-                  <span class="tech-badge">kustomize</span>
-                  <span class="tech-badge">helm</span>
-                  <span class="tech-badge">terraform</span>
-                  <span class="tech-badge">prometheus</span>
+                  <span>aws</span>
+                  <span>docker</span>
+                  <span>kubernetes</span>
+                  <span>argocd</span>
+                  <span>circleci</span>
+                  <span>kustomize</span>
+                  <span>helm</span>
+                  <span>terraform</span>
+                  <span>prometheus</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Oct 2019 - Dec 2020</span>
-                <div class="card-title">
-                  <div class="title">Game Publishing Analytics Dashboard</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2019-10">Oct 2019</time> - <time datetime="2020-12">Dec 2020</time></span>
+                <h3 class="title">Game Publishing Analytics Dashboard</h3>
+                <p class="description">
                   Among a team of 5 developers: worked on the game publishing dashboard used to analyze KPIs from our
                   studios' games and their ads.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">express</span>
-                  <span class="tech-badge">fastify</span>
-                  <span class="tech-badge">nodejs</span>
-                  <span class="tech-badge">python</span>
-                  <span class="tech-badge">django</span>
-                  <span class="tech-badge">postgresql</span>
-                  <span class="tech-badge">aws</span>
-                  <span class="tech-badge">vue.js</span>
-                  <span class="tech-badge">kubernetes</span>
+                  <span>javascript</span>
+                  <span>express</span>
+                  <span>fastify</span>
+                  <span>nodejs</span>
+                  <span>python</span>
+                  <span>django</span>
+                  <span>postgresql</span>
+                  <span>aws</span>
+                  <span>vue.js</span>
+                  <span>kubernetes</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Mar 2019 - Sep 2019</span>
-                <div class="card-title">
-                  <div class="title">User Acquisition Campaign Automation</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2019-03">Mar 2019</time> - <time datetime="2019-09">Sep 2019</time></span>
+                <h3 class="title">User Acquisition Campaign Automation</h3>
+                <p class="description">
                   Technical lead: automate the creation of user acquisition campaigns in multiple ad services. Some had
                   APIs (facebook), others required mimicking user inputs using a headless browser
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">koa</span>
-                  <span class="tech-badge">nodejs</span>
-                  <span class="tech-badge">vue.js</span>
-                  <span class="tech-badge">postgresql</span>
-                  <span class="tech-badge">aws</span>
-                  <span class="tech-badge">puppeteer</span>
+                  <span>javascript</span>
+                  <span>koa</span>
+                  <span>nodejs</span>
+                  <span>vue.js</span>
+                  <span>postgresql</span>
+                  <span>aws</span>
+                  <span>puppeteer</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Sep 2018 - Feb 2019</span>
-                <div class="card-title">
-                  <div class="title">Voodoo Lite - Self-Publishing Platform</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2018-09">Sep 2018</time> - <time datetime="2019-02">Feb 2019</time></span>
+                <h3 class="title">Voodoo Lite - Self-Publishing Platform</h3>
+                <p class="description">
                   Technical lead, project Voodoo lite: created a self publishing platform for hypercasual games,
                   allowing small studios to publish and monetize their games with minimal effort. Along with another
                   developer, handled the frontend, backend, infrastructure and devops aspects of the project.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">nodejs</span>
-                  <span class="tech-badge">express</span>
-                  <span class="tech-badge">python</span>
-                  <span class="tech-badge">django</span>
-                  <span class="tech-badge">postgresql</span>
-                  <span class="tech-badge">aws</span>
-                  <span class="tech-badge">vue.js</span>
+                  <span>javascript</span>
+                  <span>nodejs</span>
+                  <span>express</span>
+                  <span>python</span>
+                  <span>django</span>
+                  <span>postgresql</span>
+                  <span>aws</span>
+                  <span>vue.js</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Mar 2018 - Aug 2019</span>
-                <div class="card-title">
-                  <div class="title">Ad Mediation Waterfall Automation</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2018-03">Mar 2018</time> - <time datetime="2019-08">Aug 2019</time></span>
+                <h3 class="title">Ad Mediation Waterfall Automation</h3>
+                <p class="description">
                   Automate user input in a private api hosted by Mopub (ad mediation solution) to create and update
                   monetization waterfalls based on daily user-data
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">typescript</span>
-                  <span class="tech-badge">nodejs</span>
-                  <span class="tech-badge">aws</span>
-                  <span class="tech-badge">vue.js</span>
+                  <span>typescript</span>
+                  <span>nodejs</span>
+                  <span>aws</span>
+                  <span>vue.js</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">Touch & Play</div>
-                <div class="company-duration">Mar 2015 - Aug 2017</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">Touch & Play</h2>
+                <span class="company-duration"><time datetime="2015-03">Mar 2015</time> - <time datetime="2017-08">Aug 2017</time></span>
+              </header>
 
-              <div class="project">
-                <span class="date">Mar 2016 - Aug 2017</span>
-                <div class="card-title">
-                  <div class="title">Eazeat - Restaurant Ordering Platform</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2016-03">Mar 2016</time> - <time datetime="2017-08">Aug 2017</time></span>
+                <h3 class="title">Eazeat - Restaurant Ordering Platform</h3>
+                <p class="description">
                   Technical lead, project Eazeat: mobile app (ios and android) and web platform to order food and drinks
                   in restaurants and have them delivered to your table or for takeaway. Responsible for the frontend and
                   backend (api, db, devops). A coworker was responsible for the mobile apps.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">React</span>
-                  <span class="tech-badge">php5</span>
-                  <span class="tech-badge">symfony</span>
-                  <span class="tech-badge">couchdb</span>
+                  <span>React</span>
+                  <span>php5</span>
+                  <span>symfony</span>
+                  <span>couchdb</span>
                 </div>
-              </div>
+              </section>
 
-              <div class="project">
-                <span class="date">Mar 2015 - Jul 2016</span>
-                <div class="card-title">
-                  <div class="title">Restaurant Order Management System</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <span class="date"><time datetime="2015-03">Mar 2015</time> - <time datetime="2016-07">Jul 2016</time></span>
+                <h3 class="title">Restaurant Order Management System</h3>
+                <p class="description">
                   Improvements to a suite of web apps used to process orders in restaurants. The waiters would select
                   the ordered items and perform payments on ipods. The orders would be sent to ipads in the kitchen or
                   bar. Automated the setup of NUCs containing the apps and db replicas.
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">php5</span>
-                  <span class="tech-badge">symfony</span>
-                  <span class="tech-badge">mysql</span>
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">ec2</span>
-                  <span class="tech-badge">centos</span>
+                  <span>php5</span>
+                  <span>symfony</span>
+                  <span>mysql</span>
+                  <span>javascript</span>
+                  <span>ec2</span>
+                  <span>centos</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">Nintendo European R&D</div>
-                <div class="company-duration">Mar 2012 - Feb 2015</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">Nintendo European R&D</h2>
+                <span class="company-duration"><time datetime="2012-03">Mar 2012</time> - <time datetime="2015-02">Feb 2015</time></span>
+              </header>
 
-              <div class="project">
-                <div class="card-title">
-                  <div class="title">Console Prototypes & Browser-Based IDE</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <h3 class="title">Console Prototypes & Browser-Based IDE</h3>
+                <p class="description">
                   Worked alone or in small teams mostly on prototypes. Some were internal tools, others were tech demos,
                   apps or games for the Wii U and Nintendo 3DS consoles. The largest prototype was an IDE hosted in the
                   browser, made with ExtJS and allowing developers to create and debug small apps and games using LUA
                   and a custom debugger
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">extjs</span>
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">emscripten</span>
-                  <span class="tech-badge">c++</span>
-                  <span class="tech-badge">python</span>
-                  <span class="tech-badge">mysql</span>
-                  <span class="tech-badge">cassandra</span>
-                  <span class="tech-badge">wiiu</span>
-                  <span class="tech-badge">3ds</span>
-                  <span class="tech-badge">lua</span>
+                  <span>extjs</span>
+                  <span>javascript</span>
+                  <span>emscripten</span>
+                  <span>c++</span>
+                  <span>python</span>
+                  <span>mysql</span>
+                  <span>cassandra</span>
+                  <span>wiiu</span>
+                  <span>3ds</span>
+                  <span>lua</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">Mobiclip</div>
-                <div class="company-duration">Dec 2010 - Feb 2012</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">Mobiclip</h2>
+                <span class="company-duration"><time datetime="2010-12">Dec 2010</time> - <time datetime="2012-02">Feb 2012</time></span>
+              </header>
 
-              <div class="project">
-                <div class="card-title">
-                  <div class="title">Web Development & Video Encoding</div>
-                </div>
-                <div class="description">Web development and video encoding projects</div>
+              <section class="project">
+                <h3 class="title">Web Development & Video Encoding</h3>
+                <p class="description">Web development and video encoding projects</p>
                 <div class="tech-stack">
-                  <span class="tech-badge">php</span>
-                  <span class="tech-badge">mysql</span>
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">extjs</span>
-                  <span class="tech-badge">video encoding</span>
+                  <span>php</span>
+                  <span>mysql</span>
+                  <span>javascript</span>
+                  <span>extjs</span>
+                  <span>video encoding</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">INA</div>
-                <div class="company-duration">Nov 2008 - Nov 2010</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">INA</h2>
+                <span class="company-duration"><time datetime="2008-11">Nov 2008</time> - <time datetime="2010-11">Nov 2010</time></span>
+              </header>
 
-              <div class="project">
-                <div class="card-title">
-                  <div class="title">Public & Professional Website Maintenance</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <h3 class="title">Public & Professional Website Maintenance</h2>
+                <p class="description">
                   Worked alongside a team of developers and designers to create and maintain the main public website,
                   the professional one and other similar websites
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">php</span>
-                  <span class="tech-badge">symfony</span>
-                  <span class="tech-badge">mysql</span>
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">extjs</span>
+                  <span>php</span>
+                  <span>symfony</span>
+                  <span>mysql</span>
+                  <span>javascript</span>
+                  <span>extjs</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">RATP</div>
-                <div class="company-duration">May 2004 - Oct 2008</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">RATP</h2>
+                <span class="company-duration"><time datetime="2004-05">May 2004</time> - <time datetime="2008-10">Oct 2008</time></span>
+              </header>
 
-              <div class="project">
-                <div class="card-title">
-                  <div class="title">Internal Business Applications</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <h3 class="title">Internal Business Applications</h3>
+                <p class="description">
                   Worked alone or with another developer on multiple internal applications used by RATP employees.
                   Developed using Windev for the frontend and php/mysql for web applications. Some apps were used to
                   manage projects, others were more human resources related
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">jquery</span>
-                  <span class="tech-badge">php 4</span>
-                  <span class="tech-badge">mysql</span>
-                  <span class="tech-badge">windev</span>
+                  <span>javascript</span>
+                  <span>jquery</span>
+                  <span>php 4</span>
+                  <span>mysql</span>
+                  <span>windev</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
+        <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">
-              <div class="company-header">
-                <div class="company">Self-Employed</div>
-                <div class="company-duration">Nov 2003 - Apr 2004</div>
-              </div>
+              <header class="company-header">
+                <h2 class="company">Self-Employed</h2>
+                <span class="company-duration"><time datetime="2003-11">Nov 2003</time> - <time datetime="2004-04">Apr 2004</time></span>
+              </header>
 
-              <div class="project">
-                <div class="card-title">
-                  <div class="title">E-commerce Platform Development</div>
-                </div>
-                <div class="description">
+              <section class="project">
+                <h3 class="title">E-commerce Platform Development</h3>
+                <p class="description">
                   Working remotely with another developer based in the USA, improved and added functionalities to an
                   e-commerce website, on both front-office and back-office
-                </div>
+                </p>
                 <div class="tech-stack">
-                  <span class="tech-badge">javascript</span>
-                  <span class="tech-badge">jquery</span>
-                  <span class="tech-badge">php 4</span>
-                  <span class="tech-badge">mysql 3</span>
-                  <span class="tech-badge">paypal</span>
+                  <span>javascript</span>
+                  <span>jquery</span>
+                  <span>php 4</span>
+                  <span>mysql 3</span>
+                  <span>paypal</span>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </main>
 

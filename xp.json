@@ -1,8 +1,15 @@
 {
   "experiences": [
     {
+      "begin": "2026-01-21",
+      "end": "Today",
+      "company": "Qare",
+      "description": "Improve a custom clinical intaker feature. It uses prompts managed in Basalt and OpenAI's Response API.",
+      "stack": ["typescript", "nestjs", "mongodb", "sqs", "basalt", "openai"]
+    },
+    {
       "begin": "2025-12-01",
-      "end": "2026-01-30",
+      "end": "2026-01-20",
       "company": "Qare",
       "description": "Create CRUD endpoints to manage prescription templates linked to diagnoses that practitioners can use to quickly fill prescriptions for their patients.",
       "stack": ["typescript", "nestjs", "mongodb"]

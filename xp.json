@@ -1,8 +1,15 @@
 {
   "experiences": [
     {
-      "begin": "2026-01-21",
+      "begin": "2026-03-01",
       "end": "Today",
+      "company": "Qare",
+      "description": "Improved scaling of realtime transcription of audio streams previously implemented.",
+      "stack": ["typescript", "nestjs", "mongodb", "vonage", "websockets", "openai", "redis"]
+    },
+    {
+      "begin": "2026-01-21",
+      "end": "2026-02-28",
       "company": "Qare",
       "description": "Improve a custom clinical intaker feature. It uses prompts managed in Basalt and OpenAI's Response API.",
       "stack": ["typescript", "nestjs", "mongodb", "sqs", "basalt", "openai"]

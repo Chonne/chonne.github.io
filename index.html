@@ -45,8 +45,13 @@
         <ul class="header-highlights" aria-label="Career highlights">
           <li>Healthcare platforms</li>
           <li>DevOps and cloud scaling</li>
-          <li>Product and team leadership</li>
+          <li>Product and technical leadership</li>
         </ul>
+        <nav class="quick-nav" aria-label="Page sections">
+          <a href="#focus-now">Current focus</a>
+          <a href="#experience">Experience</a>
+          <a href="#earlier-experience">Earlier roles</a>
+        </nav>
         <nav class="social-links" aria-label="Social media links">
           <a href="https://github.com/Chonne" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
             <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -72,7 +77,16 @@
     </header>
 
     <main class="container">
-      <div class="timeline">
+      <section id="focus-now" class="focus-now" aria-labelledby="focus-now-title">
+        <h2 id="focus-now-title">What I focus on now</h2>
+        <ul class="focus-now-list">
+          <li>Scalable backend architecture for healthcare workflows and clinician tooling.</li>
+          <li>Real-time systems and AI-assisted product features with reliable operational guardrails.</li>
+          <li>Technical leadership: shipping with teams, improving delivery quality, and reducing platform friction.</li>
+        </ul>
+      </section>
+
+      <div class="timeline" id="experience">
         <article class="experience">
           <div class="date-column"></div>
           <div class="content-column">
@@ -310,7 +324,7 @@
           </div>
         </article>
 
-        <article class="experience">
+        <article class="experience" id="earlier-experience">
           <div class="date-column"></div>
           <div class="content-column">
             <div class="experience-card">

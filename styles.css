@@ -68,6 +68,32 @@ header p {
     margin-bottom: 10px;
 }
 
+.header-summary {
+    max-width: 72ch;
+    font-size: 0.95em;
+    line-height: 1.45;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.header-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0 0 12px;
+    padding: 0;
+}
+
+.header-highlights li {
+    background: #d0e3f0;
+    color: #2c5877;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.78em;
+    line-height: 1.2;
+}
+
 .social-links {
     display: flex;
     gap: 20px;
@@ -280,6 +306,11 @@ header p {
         color: #b0b7be;
     }
 
+    .header-highlights li {
+        background: #1a3040;
+        color: #96d7fc;
+    }
+
     .tech-stack span {
         background: #1a3040;
         color: #96d7fc;
@@ -306,6 +337,21 @@ footer p {
 
     header p {
         font-size: 0.95em;
+        margin-bottom: 8px;
+    }
+
+    .header-summary {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+
+    .header-highlights {
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .header-highlights li {
+        font-size: 0.74em;
     }
 
     .timeline::before {

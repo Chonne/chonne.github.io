@@ -233,8 +233,27 @@ header p {
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 20px;
+    padding-top: 6px;
     padding-bottom: 12px;
+    position: sticky;
+    top: 8px;
+    z-index: 3;
+    background: var(--card-bg);
     border-bottom: 2px solid var(--light-gray);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+@supports (backdrop-filter: blur(4px)) {
+    .company-header {
+        background: color-mix(in srgb, var(--card-bg) 88%, transparent);
+        backdrop-filter: blur(4px);
+    }
+}
+
+@supports not (backdrop-filter: blur(4px)) {
+    .company-header {
+        background: var(--card-bg);
+    }
 }
 
 .company {
@@ -352,6 +371,11 @@ footer p {
 
     .header-highlights li {
         font-size: 0.74em;
+    }
+
+    .company-header {
+        top: 4px;
+        padding-top: 4px;
     }
 
     .timeline::before {

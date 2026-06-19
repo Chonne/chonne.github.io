@@ -1,8 +1,15 @@
 {
   "experiences": [
     {
-      "begin": "2026-03-01",
+      "begin": "2026-06-01",
       "end": "Today",
+      "company": "self-employed",
+      "description": "Focusing on personal projects and expanding expertise in system administration, networking, and security through hands-on homelab development.",
+      "stack": ["homelab", "proxmox", "docker", "truenas"]
+    },
+    {
+      "begin": "2026-03-01",
+      "end": "2026-05-31",
       "company": "Qare",
       "description": "Improved scaling of realtime transcription of audio streams previously implemented.",
       "stack": ["typescript", "nestjs", "mongodb", "vonage", "websockets", "openai", "redis"]
